@@ -10,25 +10,25 @@ export default function NavBar({ user, setUser }) {
 
   return (
     <nav className="NavBar">
-      <Link to="/">Home</Link>
+      <Link to="/">HOME</Link>
       &nbsp; | &nbsp;
       {user ? (
         <>
-          <Link to="/posts">Post List</Link>
+          <Link to="/touches">PLAYER SESSIONS</Link>
           &nbsp; | &nbsp;
-          <Link to="/posts/new">New Post</Link>
+          <Link to="/touches/new">NEW SESSIONS</Link>
           &nbsp; | &nbsp;
           <Link to="" onClick={handleLogOut}>
-            Log Out
+            LOG OUT
           </Link>
           &nbsp;&nbsp;
           <span>Welcome, {user.name}</span>
         </>
       ) : (
         <>
-          <Link to="/login">Log In</Link>
+          <Link to="/login">SIGN IN</Link>
           &nbsp; | &nbsp;
-          <Link to="/signup">Sign Up</Link>
+          <Link to="/signup">SIGN UP</Link>
         </>
       )}
     </nav>
