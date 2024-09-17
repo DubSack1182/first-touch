@@ -31,7 +31,7 @@ export default function SignUpPage({ setUser }) {
 
   return (
     <>
-      <h2>Sign Up!</h2>
+      <h2>SIGN UP!</h2>
       <form autoComplete="off" onSubmit={handleSubmit}>
         <label>Name</label>
         <input

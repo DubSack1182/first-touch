@@ -9,7 +9,7 @@ export async function signUp(userData) {
 }
 
 export async function logIn(credentials) {
-  const token = await sendRequest(`${BASE_URL}/login`, 'POST', credentials);
+  const token = await sendRequest(`${BASE_URL}/signin`, 'POST', credentials);
   localStorage.setItem('token', token);
   return getUser();
 }

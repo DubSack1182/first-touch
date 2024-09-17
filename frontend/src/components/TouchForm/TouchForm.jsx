@@ -1,13 +1,14 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-//import * as hootServie from '../../services/hootsService';
+import * as touchService from '../../services/touchesService';
 
 
 const TouchForm = (props) => {
   const [formData, setFormData] = useState({
-    title: '',
-    text: '',
-    category: 'News',
+    Session: '',
+    Location: '',
+    Date: '',
+    Time: '',
   });
 
   const { touchId } = useParams();

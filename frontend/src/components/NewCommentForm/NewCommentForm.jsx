@@ -33,7 +33,7 @@ const CommentForm = (props) => {
   
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="text-input">Your comment:</label>
+      <label htmlFor="text-input">Post Your Review:</label>
       <textarea
         required
         type="text"
@@ -42,7 +42,7 @@ const CommentForm = (props) => {
         value={formData.text}
         onChange={handleChange}
       />
-      <button type="submit">SUBMIT COMMENT</button>
+      <button type="submit">SUBMIT REVIEW</button>
     </form>
   );
 };

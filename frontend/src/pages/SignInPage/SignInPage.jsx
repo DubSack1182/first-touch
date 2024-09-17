@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import * as authService from '../../services/authService';
 
-export default function LogInPage({ setUser }) {
+export default function SignInPage({ setUser }) {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -26,7 +26,7 @@ export default function LogInPage({ setUser }) {
 
   return (
     <>
-      <h2>Log In!</h2>
+      <h2>SIGN IN!</h2>
       <form autoComplete="off" onSubmit={handleSubmit}>
         <label>Email</label>
         <input
@@ -44,7 +44,7 @@ export default function LogInPage({ setUser }) {
           onChange={handleChange}
           required
         />
-        <button type="submit">LOG IN</button>
+        <button type="submit">SIGN IN</button>
       </form>
       <p className="error-message">&nbsp;{errorMsg}</p>
     </>
