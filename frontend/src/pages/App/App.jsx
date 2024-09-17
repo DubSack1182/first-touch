@@ -1,11 +1,12 @@
-import { useState } from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import { getUser } from '../../services/authService';
 import './App.css';
 import NavBar from '../../components/NavBar/NavBar';
 import HomePage from '../HomePage/HomePage';
-import PostListPage from '../PostListPage/PostListPage';
-import NewPostPage from '../NewPostPage/NewPostPage';
+import TouchListPage from '../TouchListPage/TouchListPage';
+import TouchDetails from '../TouchDetailsPage/TouchDetailsPage';
+import TouchForm from '../../components/TouchForm/TouchForm';
 import SignUpPage from '../SignUpPage/SignUpPage';
 import SignInPage from '../SignInPage/SignInPage';
 import * as touchService from '../../services/touchesService'
@@ -49,13 +50,16 @@ function App() {
   };
   return (
     <main id="react-app">
-      <NavBar user={user} setUser={setUser} />
+      <NavBar user={user} setUser={setUser} />   
       <section id="main-section">
         {user ? (
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/posts" element={<PostListPage />} />
-            <Route path="/posts/new" element={<NewPostPage />} />
+            <Route path="/touches" element={<TouchListPage touches={touches} />} />
+            <Route path="/touches/:touchId" element={<TouchDetails user={user} handleDeleteTouch={handleDeleteTouch} />} />
+            <Route path="/touches/new" element={<TouchForm handleAddTouch={handleAddTouch} />} />
+            <Route path="/touches/:touchId/edit" element={<TouchForm handleUpdateTouch={handleUpdateTouch} />} />
+            <Route path="/touches/:touchId/comments/:commentId/edit" element={<CommentForm />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         ) : (

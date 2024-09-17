@@ -20,7 +20,7 @@ const TouchForm = (props) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
     if (touchId) {
-        props.handleUpdateHoot(touchId, formData);
+        props.handleUpdateTouch(touchId, formData);
       } else {
         props.handleAddTouch(formData);
       }
