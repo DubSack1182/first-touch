@@ -24,7 +24,7 @@ const touchSchema = new mongoose.Schema(
       Location: {
         type: String,
         required: true,
-        enum: ['Reid Park', 'Franecs Bradley Park', 'Elon Park', 'Shuffletown Park'],
+        enum: ['Reid Park', 'Frances Bradley Park', 'Elon Park', 'Shuffletown Park'],
       },
       Date: {
         type: String,
