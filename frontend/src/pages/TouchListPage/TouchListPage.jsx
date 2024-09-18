@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 export default function TouchListPage(props) {
   return (
     <>
-    <h1>Session List Page</h1>
+    <h1>Player Session Page</h1>
       <main>
     {props.touches.map((touch) => (
       <Link key={touch._id} to={`/touches/${touch._id}`}>
