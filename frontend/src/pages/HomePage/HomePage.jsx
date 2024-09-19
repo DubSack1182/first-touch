@@ -1,3 +1,6 @@
+import { useState } from 'react';
+import * as authService from '../../services/authService';
+
 export default function HomePage() {
   return (
     <div className="container">

@@ -1,26 +1,16 @@
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import * as touchService from '../../services/touchesService';
 
 export default function TouchListPage(props) {
+      console.log("props", props)
   return (
     <>
-    <h1>Player Session Page</h1>
-      <main>
-    {props.touches.map((touch) => (
-      <Link key={touch._id} to={`/touches/${touch._id}`}>
-        <article>
-          <header>
-            <h2>{touch.title}</h2>
-            <p>
-              {touch.author.username} posted on 
-              {new Date(touch.createdAt).toLocaleDateString()}
-            </p>
-          </header>
-          <p>{touch.text}</p>
-        </article>
-      </Link>
-    ))}
-  </main>
-  </>
-  
-)
+  {props.touches.map(touch => (
+      <div key={touch._id}>
+      {touch.location}
+      </div>
+    ))} 
+    </>
+  )
 }

@@ -18,6 +18,7 @@ export default function NavBar({ user, setUser }) {
           &nbsp; | &nbsp;
           <Link to="/touches/new">NEW SESSIONS</Link>
           &nbsp; | &nbsp;
+          <link to="" />
           <Link to="" onClick={handleLogOut}>
             LOG OUT
           </Link>

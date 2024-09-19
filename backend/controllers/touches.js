@@ -11,11 +11,11 @@ module.exports = {
 
 // INDEX FUNCTIONALITY 
  async function index(req, res) {
+      console.log("getting all sessions");
     try {
       const touches = await Touch.find({})
-        .populate('author')
         .sort({ createdAt: 'desc' });
-      res.status(200).json(hoots);
+      res.status(200).json(touches);
     } catch (error) {
       res.status(500).json(error);
     }
@@ -24,7 +24,7 @@ module.exports = {
 // SHOW FUNCTIONALITY 
 async function show(req, res) {
     try {
-      const touch = await Touch.findById(req.params.touchId).populate('author');
+      const touch = await Touch.findById(req.params.touchId).populate('session');
       res.status(200).json(touch);
     } catch (error) {
       res.status(500).json(error);
@@ -34,6 +34,7 @@ async function show(req, res) {
 // CREATE FUNCTIONALITY 
  async function create(req, res) {
     console.log(req.user);
+    console.log(req.body);
     try {
       req.body.author = req.user._id;
       const touch = await Touch.create(req.body);

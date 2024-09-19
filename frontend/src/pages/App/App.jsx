@@ -5,7 +5,6 @@ import './App.css';
 import NavBar from '../../components/NavBar/NavBar';
 import HomePage from '../HomePage/HomePage';
 import TouchListPage from '../TouchListPage/TouchListPage';
-import TouchDetails from '../TouchDetailsPage/TouchDetailsPage';
 import TouchForm from '../../components/TouchForm/TouchForm';
 import SignUpPage from '../SignUpPage/SignUpPage';
 import SignInPage from '../SignInPage/SignInPage';
@@ -55,8 +54,7 @@ function App() {
         {user ? (
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/touches" element={<TouchListPage touches={touches} />} />
-            <Route path="/touches/:touchId" element={<TouchDetails user={user} handleDeleteTouch={handleDeleteTouch} />} />
+            <Route path="/touches/" element={<TouchListPage touches={touches} />} />
             <Route path="/touches/new" element={<TouchForm handleAddTouch={handleAddTouch} />} />
             <Route path="/touches/:touchId/edit" element={<TouchForm handleUpdateTouch={handleUpdateTouch} />} />
             <Route path="/touches/:touchId/comments/:commentId/edit" element={<CommentForm />} />

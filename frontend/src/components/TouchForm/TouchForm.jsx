@@ -16,7 +16,7 @@ const TouchForm = (props) => {
   const handleChange = (evt) => {
     setFormData({ ...formData, [evt.target.name]: evt.target.value });
   };
-
+        console.log("form data", formData);
   const handleSubmit = (evt) => {
     evt.preventDefault();
     if (touchId) {
@@ -41,7 +41,7 @@ const TouchForm = (props) => {
         <label htmlFor="session-input">SESSION</label>
         <select
           required
-          name="session"
+          name="Session"
           id="session-input"
           value={formData.category}
           onChange={handleChange}
@@ -57,7 +57,7 @@ const TouchForm = (props) => {
         <label htmlFor="location-input">LOCATION</label>
         <select
           required
-          name="location"
+          name="Location"
           id="location-input"
           value={formData.category}
           onChange={handleChange}
@@ -70,7 +70,7 @@ const TouchForm = (props) => {
         <label htmlFor="date-input">DATE</label>
         <select
           required
-          name="date"
+          name="Date"
           id="date-input"
           value={formData.category}
           onChange={handleChange}
@@ -91,7 +91,7 @@ const TouchForm = (props) => {
         <label htmlFor="time-input">TIME</label>
         <select
           required
-          name="time"
+          name="Time"
           id="time-input"
           value={formData.category}
           onChange={handleChange}
