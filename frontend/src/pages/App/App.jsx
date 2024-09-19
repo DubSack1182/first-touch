@@ -54,7 +54,7 @@ function App() {
         {user ? (
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/touches/" element={<TouchListPage touches={touches} />} />
+            <Route path="/touches/" element={<TouchListPage touches={touches} handleDeleteTouch={handleDeleteTouch} />} />
             <Route path="/touches/new" element={<TouchForm handleAddTouch={handleAddTouch} />} />
             <Route path="/touches/:touchId/edit" element={<TouchForm handleUpdateTouch={handleUpdateTouch} />} />
             <Route path="/touches/:touchId/comments/:commentId/edit" element={<CommentForm />} />

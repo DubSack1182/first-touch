@@ -18,10 +18,9 @@ export default function NavBar({ user, setUser }) {
           &nbsp; | &nbsp;
           <Link to="/touches/new">NEW SESSIONS</Link>
           &nbsp; | &nbsp;
-          <link to="" />
-          <Link to="" onClick={handleLogOut}>
-            LOG OUT
-          </Link>
+          <Link to="/touches/:touchId/comments/:commentId/edit">REVIEWS</Link>
+          &nbsp; | &nbsp;
+          <Link to="" onClick={handleLogOut}>LOG OUT</Link>
           &nbsp;&nbsp;
           <span>Welcome, {user.name}</span>
         </>

@@ -24,7 +24,7 @@ module.exports = {
 // SHOW FUNCTIONALITY 
 async function show(req, res) {
     try {
-      const touch = await Touch.findById(req.params.touchId).populate('session');
+      const touch = await Touch.findById(req.params.touchId);
       res.status(200).json(touch);
     } catch (error) {
       res.status(500).json(error);

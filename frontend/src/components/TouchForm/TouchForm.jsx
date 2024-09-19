@@ -12,6 +12,7 @@ const TouchForm = (props) => {
   });
 
   const { touchId } = useParams();
+  console.log(touchId)
 
   const handleChange = (evt) => {
     setFormData({ ...formData, [evt.target.name]: evt.target.value });
@@ -32,7 +33,7 @@ const TouchForm = (props) => {
       setFormData(touchData);
     };
     if (touchId) fetchTouch();
-  }, [touchId]);
+  }, [touchId]); 
 
   return (
     <main>
@@ -43,7 +44,7 @@ const TouchForm = (props) => {
           required
           name="Session"
           id="session-input"
-          value={formData.category}
+          value={formData.Session}
           onChange={handleChange}
         >
           <option value="Passing & Receiving">Passing & Receiving</option>
@@ -59,7 +60,7 @@ const TouchForm = (props) => {
           required
           name="Location"
           id="location-input"
-          value={formData.category}
+          value={formData.Location}
           onChange={handleChange}
         >
           <option value="Reid Park">Reid Park</option>
@@ -72,7 +73,7 @@ const TouchForm = (props) => {
           required
           name="Date"
           id="date-input"
-          value={formData.category}
+          value={formData.Date}
           onChange={handleChange}
         >
           <option value="January">January</option>
@@ -93,7 +94,7 @@ const TouchForm = (props) => {
           required
           name="Time"
           id="time-input"
-          value={formData.category}
+          value={formData.Time}
           onChange={handleChange}
         >
           <option value="1:30 to 2:30">1:30 to 2:30</option>
