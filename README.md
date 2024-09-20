@@ -1,5 +1,5 @@
 # Dynamic First Touch
-https://dynamicsoccer-814ac914ad58.herokuapp.com/
+https://first-touch-76a0fccb0879.herokuapp.com/
 
 ## Players Application that allows them to Create | Update | Delete training sessions and post Reviews.
 
@@ -28,7 +28,7 @@ https://trello.com/b/GQWCcEBd/first-touch
 * CSS
 
 ### Landing Page:
-![alt text](DFTFInalHomePage.png)
+![alt text](DFTFinalHomePage.png)
 
 ### Player Session Page:
 ![alt text](DFTFinalPlayerPage.png)
@@ -38,6 +38,7 @@ https://trello.com/b/GQWCcEBd/first-touch
 
 
 ### More Functionality and users to be added
+* Ability to actually use CSS to get the images above to reality!
 1. AAC, Landing Page give a quick sessions view | Log-In | Sign-Up
 2. AAC, View All Coaches and their sessions with details
 3. AAC, Book Sessions (Specific Coach)

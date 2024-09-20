@@ -17,7 +17,7 @@
 }
 
 body {
-  margin: 0;
+  margin: 10;
   min-height: 100vh;
 }
 
@@ -56,9 +56,9 @@ a {
 form {
   display: grid;
   gap: 1.2vmin;
-  padding: 4vmin;
-  border: 0.5vmin solid #0004ff;
-  border-radius: 1vmin;
+  padding:4vmin;
+  border: 1vmin solid #0004ff;
+  border-radius: 5vmin;
 }
 
 input {
@@ -152,4 +152,37 @@ h2 {
   top: 10;
   left: 0;
   width: 100%;
+}
+
+.bigbox {
+  width: 50%;
+  display: grid;
+  border: 1vmin solid #0004ff;
+}
+
+.boxone {
+  width: 25%;
+  box-sizing: border-box;
+  border: 0.5vmin solid #0004ff;
+}
+
+.boxtwo {
+  width: 25%;
+  box-sizing: border-box;
+  border: 0.5vmin solid #0004ff;
+  margin-top: 70px;
+}
+
+.boxthree {
+  width: 25%;
+  box-sizing: border-box;
+  border: 0.5vmin solid #0004ff;
+  margin-top: 70px;
+}
+
+.boxfour {
+  width: 25%;
+  box-sizing: border-box;
+  border: 0.5vmin solid #0004ff;
+  margin-top: 70px;
 }

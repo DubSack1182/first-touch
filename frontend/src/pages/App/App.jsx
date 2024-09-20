@@ -46,7 +46,7 @@ function App() {
   
     setTouches(touches.map((touch) => (touchId === touch._id ? updatedTouch : touch)));
   
-    navigate(`/touches/${touchId}`);
+    navigate('/touches/new');
   };
 
   const handleAddComment = async (commentFormData) => {
