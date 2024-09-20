@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom'
 
-export default function TouchListPage(props) {
+export default function ReviewsPage(props) {
       console.log(props)
   return (
     <div class="flex-container">
-    <h1>PLAYER SESSIONS</h1>
+    <h1>Reviews</h1>
       <main>
-  {props.touches.map(touch => (
-    <Link key={touch._id} to={`/touches/${touch._id}/edit`}>
+  {props.comments.filter(comment => (
+    <Link key={comment._id} to={`/touches/${touch._id}/comment`}>
       <article>
       <div class="box one">{touch.Session}</div> 
       <div class="box two">{touch.Location}</div> 

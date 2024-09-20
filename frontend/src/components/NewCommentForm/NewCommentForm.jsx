@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import * as touchService from '../../services/touchesService';
 
 const CommentForm = (props) => {
@@ -43,8 +43,7 @@ const CommentForm = (props) => {
         onChange={handleChange}
       />
       <button type="submit">SUBMIT REVIEW</button>
-      <button type="submit">UPDATE REVIEW</button>
-      <button type="submit">DELETE REVIEW</button>
+      <button onClick={() => props.handleDeleteComment(comment._id)} >DELETE</button>
     </form>
   );
 };

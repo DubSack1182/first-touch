@@ -4,16 +4,16 @@ import * as authService from '../../services/authService';
 export default function HomePage() {
   return (
     <div className="container">
-    <h1>Dynamic First Touch</h1>
+    <div className="header"><h1>Dynamic First Touch</h1></div>
 
-    <div class="box one">
+    <div class="boxOne">
     <h2>Dynamic Warm-Up Drills</h2>
     <p>Stretching Excercise</p>
     <p>Agility Ladder Drill</p>
     <p>Jogging & Footwork Drill</p>
     </div>
 
-    <div class="box two">
+    <div class="boxTwo">
     <h2>Dynamic Passing & Receiving Drills</h2>
     <p>1 Touch Passing Drill</p>
     <p>2 Touch Passing Drill</p>
@@ -22,14 +22,14 @@ export default function HomePage() {
     <p>Pressure Passing Drill</p>
     </div>
 
-    <div class="box three">
+    <div class="boxThree">
     <h2>Dynamic Shooting Drills</h2>
     <p>Power Shooting Drill</p>
     <p>Finesse Shooting Drill</p>
     <p>1 on 1 Finishing Drill</p>
     </div>
 
-    <div class="box four">
+    <div class="boxFour">
     <h2>Dynamic Dribbling Drills</h2>
     <p>Cone Dribbling Drill</p>
     <p>Zigzag Dribbling Drill</p>
@@ -38,21 +38,21 @@ export default function HomePage() {
     <p>Shadow Dribbling Drill</p>
     </div>
 
-    <div class="box one a">
+    <div class="boxOneA">
     <h2>Dynamic Defensive Drills</h2>
     <p>Pressure & Cover Drill</p>
     <p>Tackling Technique Drill</p>
     <p>Defensive Shape & Communication</p>
     </div>
 
-    <div class="box two b">
+    <div class="boxTwoB">
     <h2>Conditioning Drills</h2>
     <p>Interval Training for Endurance</p>
     <p>Speed & Agility Circuit</p>
     <p>Plyometric Excercises for Explosiveness</p>
     </div>
 
-    <div class="box three c">
+    <div class="boxThreeC">
     <h2>Goalkeeping Drills</h2>
     <p>Reaction Time Drill</p>
     <p>Positioning Drill</p>
@@ -60,7 +60,7 @@ export default function HomePage() {
     <p>Cross Catching Drill</p>
     </div>
 
-    <div class="box four d">
+    <div class="boxFourD">
     <h2>Coordination & Teamwork Drills</h2>
     <p>Small-Sided Games</p>
     <p>Possession & Transition Drill</p>

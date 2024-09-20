@@ -15,7 +15,7 @@ router.get('/:touchId', touchesCtrl.show);
 router.post('/', touchesCtrl.create); 
 
 // POST /touches/:touchId/comments --> COMMENT --- CREATE FUNCTIONALITY
-router.post('/:touchId/comments/:commentId', commentsCtrl.create); 
+router.post('/:touchId/comments', commentsCtrl.create); 
 
 // PUT /touches/:touchId --> UPDATE FUNCTIONALITY
 router.put('/:touchId', touchesCtrl.update); 

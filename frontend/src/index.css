@@ -3,7 +3,7 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color: #1a1a1a;
+  color: rgb(253, 0, 0);
   background-color: rgba(145, 145, 145, 0);
 
   font-synthesis: none;
@@ -53,11 +53,6 @@ a {
   color: #1a1a1a;
 }
 
-a:hover {
-  background-color: #ff0000;
-  color: whitesmoke;
-}
-
 form {
   display: grid;
   gap: 1.2vmin;
@@ -88,4 +83,73 @@ h2 {
 
 .error-message {
   color: rgb(166, 29, 29);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+ 
+}
+
+.boxOne {
+  width: 25%;
+  box-sizing: border-box;
+  border: 0.5vmin solid #0004ff;
+  margin-top: 70px;
+}
+
+.boxTwo {
+  width: 25%;
+  box-sizing: border-box;
+  border: 0.5vmin solid #0004ff;
+  margin-top: 70px;
+}
+
+.boxThree {
+  width: 25%;
+  box-sizing: border-box;
+  border: 0.5vmin solid #0004ff;
+  margin-top: 70px;
+}
+
+.boxFour {
+  width: 25%;
+  box-sizing: border-box;
+  border: 0.5vmin solid #0004ff;
+  margin-top: 70px;
+}
+
+.boxOneA {
+  width: 25%;
+  box-sizing: border-box;
+  border: 0.5vmin solid #0004ff;
+  margin-top: 70px;
+}
+
+.boxTwoB {
+  width: 25%;
+  box-sizing: border-box;
+  border: 0.5vmin solid #0004ff;
+  margin-top: 70px;
+}
+
+.boxThreeC {
+  width: 25%;
+  box-sizing: border-box;
+  border: 0.5vmin solid #0004ff;
+  margin-top: 70px;
+}
+
+.boxFourD {
+  width: 25%;
+  box-sizing: border-box;
+  border: 0.5vmin solid #0004ff;
+  margin-top: 70px;
+}
+
+.header {
+  position: fixed;
+  top: 10;
+  left: 0;
+  width: 100%;
 }

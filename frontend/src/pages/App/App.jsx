@@ -5,6 +5,7 @@ import './App.css';
 import NavBar from '../../components/NavBar/NavBar';
 import HomePage from '../HomePage/HomePage';
 import TouchListPage from '../TouchListPage/TouchListPage';
+import ReviewsPage from '../ReviewsPage/ReviewsPage';
 import TouchForm from '../../components/TouchForm/TouchForm';
 import SignUpPage from '../SignUpPage/SignUpPage';
 import SignInPage from '../SignInPage/SignInPage';
@@ -47,6 +48,18 @@ function App() {
   
     navigate(`/touches/${touchId}`);
   };
+
+  const handleAddComment = async (commentFormData) => {
+    const newComment = await touchService.createComment(touchId, commentFormData);
+    setTouch({ ...touch, comments: [...touch.comments, newComment] });
+};
+
+const handleDeleteComment = async (commentId) => {
+  console.log('commentId:', commentId);
+  const deleteComment = await touchService.deleteComment(touchId, commentId)
+  setTouch({...touch, comments: touch.comments.filter((comment) => comment._id !== commentId),});
+};
+
   return (
     <main id="react-app">
       <NavBar user={user} setUser={setUser} />   
@@ -57,7 +70,9 @@ function App() {
             <Route path="/touches/" element={<TouchListPage touches={touches} handleDeleteTouch={handleDeleteTouch} />} />
             <Route path="/touches/new" element={<TouchForm handleAddTouch={handleAddTouch} />} />
             <Route path="/touches/:touchId/edit" element={<TouchForm handleUpdateTouch={handleUpdateTouch} />} />
-            <Route path="/touches/:touchId/comments/:commentId/edit" element={<CommentForm />} />
+            <Route path="/:touchId/comments/edit" element={<CommentForm handleAddComment={handleAddComment} />} />
+            <Route path="/touches/" element={<ReviewsPage touches={touches} handleDeleteComment={handleDeleteComment} />} />
+            <Route path="/:touchId/comments" element={<CommentForm />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         ) : (
